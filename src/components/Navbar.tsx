@@ -107,29 +107,30 @@ const Navbar: React.FC<NavbarProps> = ({ scrollPosition }) => {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`fixed inset-0 z-40 bg-white dark:bg-gray-900 transition-transform duration-300 md:hidden ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-20">
-          <nav>
-            <ul className="flex flex-col space-y-6">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </div>
+<div
+  className={`absolute top-0 left-0 w-full h-screen bg-white dark:bg-gray-900 transition-transform duration-300 md:hidden ${
+    isMenuOpen ? "translate-y-0" : "-translate-y-full"
+  }`}
+>
+  <div className="container mx-auto px-4 py-20">
+    <nav>
+      <ul className="flex flex-col space-y-6">
+        {navLinks.map(link => (
+          <li key={link.name}>
+            <a
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</div>
+
     </header>
   );
 };

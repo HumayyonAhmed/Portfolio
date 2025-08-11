@@ -7,6 +7,7 @@ import Mutarjim from "../assets/mutarjim.jpeg";
 import Expense from "../assets/expense.jpg";
 import Resturant from "../assets/resturant.png";
 import Encrypt from "../assets/encrypt.png";
+import PostAI from "../assets/postai.png";
 
 interface Project {
   id: number;
@@ -23,15 +24,14 @@ const Portfolio: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "ERP Web App",
-      category: "Web Application",
-      image: ERPSoft,
+      title: "AI Post Generator",
+      category: "Personal Project",
+      image: PostAI,
       description:
-        "A comprehensive ERP system built for a textile company to manage inventory, purchases, sales, employee records, payroll, and detailed business analytics. Designed to streamline operations and improve efficiency across departments.",
-      technologies: [".NET", "React", "SQL Server", "Bootstrap"],
-      demoLink:
-        "https://drive.google.com/file/d/19VG-LYZkBbt0-MWOnz4JYXDQc1dVGOVJ/view?usp=sharing",
-      githubLink: "",
+        "Post Wizardry is a lightweight tool that allows users to generate high-quality, mobile-optimized Instagram posts with pixel-perfect design",
+      technologies: ["React", "Gemini API", "Supabase", "Tailwind CSS"],
+      demoLink: "https://post-wizardry.vercel.app/",
+      githubLink: "https://github.com/HumayyonAhmed/AI-Generator",
     },
     {
       id: 2,
@@ -41,8 +41,20 @@ const Portfolio: React.FC = () => {
         "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       description:
         "An AI-powered tool that generates web elements based on user prompts using Gemini API and displays them in real-time.",
-      technologies: ["React", "Gemini API", "Node.js", "Tailwind CSS"],
+      technologies: ["React", "Gemini API", "Tailwind CSS"],
       demoLink: "",
+      githubLink: "https://github.com/HumayyonAhmed/AI-Generator",
+    },
+    {
+      id: 4,
+      title: "ERP Web App",
+      category: "Web Application",
+      image: ERPSoft,
+      description:
+        "A comprehensive ERP system built for a multinational company to manage inventory, purchases, sales, employee records, payroll, and detailed business analytics. Designed to streamline operations and improve efficiency across departments.",
+      technologies: [".NET", "React", "SQL Server", "Bootstrap"],
+      demoLink: "",
+        // "https://drive.google.com/file/d/19VG-LYZkBbt0-MWOnz4JYXDQc1dVGOVJ/view?usp=sharing",
       githubLink: "",
     },
     {
@@ -60,11 +72,11 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 5,
-      title: "Expense Tracker PWA",
+      title: "Expense Tracker",
       category: "Personal Project",
       image: Expense,
       description:
-        "A Progressive Web App (PWA) for tracking daily expenses, featuring offline functionality using LocalStorage and installable on mobile/desktop devices.",
+        "A Progressive Web App for tracking daily expenses, featuring offline functionality using LocalStorage and installable on mobile/desktop devices.",
       technologies: ["React", "PWA", "LocalStorage", "Bootstrap"],
       demoLink: "https://tcw-expense-tracker.netlify.app/",
       githubLink: "https://github.com/HumayyonAhmed/tcw-expense-tracker",
@@ -112,7 +124,7 @@ const Portfolio: React.FC = () => {
         "A mobile app that uses AR to show 3D models of restaurant dishes. Users can view details, customize orders, and share their experience. Built with React and .NET for Iqra University.",
       technologies: ["React", "MUI", "Redux", "Formik", "Yup", ".NET"],
       demoLink: "https://resturantar.netlify.app",
-      githubLink: "",
+      githubLink: "https://github.com/HumayyonAhmed/ResturantAR",
     },
     {
       id: 10,
